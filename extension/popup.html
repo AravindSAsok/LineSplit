@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LineSplit</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <h1>LineSplit</h1>
+        <p class="subtitle">Split clipboard text into chunks</p>
+      </div>
+      <span class="version">MVP</span>
+    </header>
+
+    <section class="controls">
+      <label for="chunkSize">Lines per chunk</label>
+      <input id="chunkSize" type="number" min="1" max="10000" value="100">
+      <div class="actions">
+        <button id="pasteButton" class="primary" type="button">Paste Clipboard</button>
+        <button id="clearButton" class="secondary" type="button">Clear</button>
+      </div>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="summary" class="summary" hidden>
+      <span id="lineCount">0 lines</span>
+      <span id="chunkCount">0 chunks</span>
+    </section>
+
+    <section id="chunks" class="chunks" aria-label="Text chunks"></section>
+  </main>
+</body>
+</html>
