@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "LineSplit",
+  "version": "1.1.0",
+  "description": "Split clipboard text into manageable line-based chunks.",
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "storage"
+  ],
+  "action": {
+    "default_title": "LineSplit",
+    "default_popup": "popup.html"
+  }
+}
